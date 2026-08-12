@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Home Cleaning | Huntington, Starksboro & Chittenden County</title>
+    <meta name="description" content="Owner-operated residential cleaning for homes, apartments, and townhouses in Huntington, Starksboro, and Chittenden County, Vermont.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: {
+                            950: '#141311',
+                            900: '#1c1b19',
+                            800: '#2a2926',
+                            700: '#3f3d39',
+                            600: '#5c5954',
+                            500: '#7a766f',
+                            400: '#9c9890',
+                            300: '#c4bfb6',
+                            200: '#e2ded6',
+                            100: '#f0ede7',
+                            50: '#f7f5f1',
+                        },
+                        sage: {
+                            700: '#3f5c4a',
+                            600: '#4f735c',
+                            500: '#6a8f76',
+                            100: '#e8f0ea',
+                            50: '#f3f7f4',
+                        },
+                        clay: {
+                            500: '#b07a5a',
+                            400: '#c99575',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Outfit"', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 18px 50px -28px rgba(20, 19, 17, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1c1b19;
+            --sage: #4f735c;
+            --paper: #f7f5f1;
+            --mist: #ebe7df;
+        }
+
+        body {
+            font-family: 'Outfit', system-ui, sans-serif;
+            background:
+                radial-gradient(1200px 600px at 10% -10%, rgba(79, 115, 92, 0.08), transparent 55%),
+                radial-gradient(900px 500px at 100% 0%, rgba(176, 122, 90, 0.07), transparent 50%),
+                linear-gradient(180deg, #faf8f5 0%, #f3f0ea 40%, #f7f5f1 100%);
+            color: var(--ink);
+        }
+
+        .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+        .logo-mark {
+            width: 2.6rem;
+            height: 2.6rem;
+            flex-shrink: 0;
+        }
+
+        .hero-ken {
+            animation: ken 22s ease-in-out infinite alternate;
+        }
+
+        @keyframes ken {
+            from { transform: scale(1.05) translate3d(0, 0, 0); }
+            to { transform: scale(1.12) translate3d(-1.5%, 1%, 0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-scrolled {
+            background: rgba(250, 248, 245, 0.92) !important;
+            border-bottom-color: rgba(28, 27, 25, 0.08) !important;
+            backdrop-filter: blur(14px);
+        }
+
+        .video-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #1c1b19;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .grain::before {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            opacity: 0.18;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            mix-blend-mode: soft-light;
+        }
+
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(28,27,25,0.18), transparent);
+        }
+
+        details.faq summary::-webkit-details-marker { display: none; }
+
+        input:checked + .choice-ui {
+            border-color: #4f735c;
+            background: #f3f7f4;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-sage-100 selection:text-ink-900 pb-24 lg:pb-0">
+
+    <!-- Header -->
+    <header id="site-header" class="fixed top-0 inset-x-0 z-50 border-b border-transparent transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-[4.5rem]">
+                <a href="#home" class="flex items-center gap-3 group" aria-label="Fresh Home Cleaning home">
+                    <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="64" height="64" rx="14" fill="#1C1B19"/>
+                        <path d="M32 14L48 26V48H38V35H26V48H16V26L32 14Z" stroke="#F7F5F1" stroke-width="2.2" stroke-linejoin="round"/>
+                        <path d="M32 22C32 22 28.5 27.5 28.5 31.2C28.5 34.1 30.1 35.8 32 35.8C33.9 35.8 35.5 34.1 35.5 31.2C35.5 27.5 32 22 32 22Z" fill="#6A8F76"/>
+                    </svg>
+                    <div class="leading-none">
+                        <span class="font-display text-[1.55rem] font-semibold tracking-tight text-ink-900 block">Fresh Home</span>
+                        <span class="text-[0.65rem] tracking-[0.22em] uppercase text-ink-500 font-medium">Cleaning</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-[0.8rem] tracking-wide uppercase text-ink-600">
+                    <a href="#about" class="hover:text-ink-900 transition-colors">About</a>
+                    <a href="#services" class="hover:text-ink-900 transition-colors">Services</a>
+                    <a href="#gallery" class="hover:text-ink-900 transition-colors">Work</a>
+                    <a href="#video" class="hover:text-ink-900 transition-colors">Video</a>
+                    <a href="#faq" class="hover:text-ink-900 transition-colors">FAQ</a>
+                    <a href="#contact" class="hover:text-ink-900 transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden sm:flex items-center gap-5">
+                    <a href="tel:8027355949" class="text-sm font-medium text-ink-700 hover:text-ink-950 transition-colors tracking-wide">802-735-5949</a>
+                    <a href="#quote-form" class="bg-ink-900 hover:bg-ink-800 text-ink-50 text-sm font-medium px-5 py-2.5 transition-colors">
+                        Free Quote
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-ink-800" aria-label="Open menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-ink-50/98 border-b border-ink-200 px-4 pb-6 pt-2">
+            <div class="flex flex-col gap-1 text-sm uppercase tracking-wider text-ink-700">
+                <a href="#about" class="py-3 border-b border-ink-200/70">About</a>
+                <a href="#services" class="py-3 border-b border-ink-200/70">Services</a>
+                <a href="#gallery" class="py-3 border-b border-ink-200/70">Work</a>
+                <a href="#video" class="py-3 border-b border-ink-200/70">Video</a>
+                <a href="#faq" class="py-3 border-b border-ink-200/70">FAQ</a>
+                <a href="#contact" class="py-3 border-b border-ink-200/70">Contact</a>
+            </div>
+            <div class="mt-5 grid gap-3">
+                <a href="tel:8027355949" class="text-center border border-ink-300 py-3 font-medium text-ink-900">Call 802-735-5949</a>
+                <a href="#quote-form" class="text-center bg-ink-900 text-ink-50 py-3 font-medium">Request a Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero: full-bleed, brand-first -->
+    <section id="home" class="relative min-h-[100svh] flex items-end overflow-hidden">
+        <div class="absolute inset-0">
+            <img
+                src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/home1.jpg"
+                alt="Freshly cleaned living space by Fresh Home Cleaning"
+                class="hero-ken w-full h-full object-cover"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/45 to-ink-950/25"></div>
+            <div class="absolute inset-0 grain"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 pt-32">
+            <p class="font-display text-white/95 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[0.95] max-w-4xl">
+                Fresh Home Cleaning
+            </p>
+            <h1 class="mt-6 max-w-xl text-lg sm:text-xl text-white/85 font-light leading-relaxed">
+                A quieter, cleaner home — without giving up your weekend.
+            </h1>
+            <p class="mt-4 max-w-lg text-sm sm:text-[0.95rem] text-white/65 leading-relaxed">
+                Owner-operated residential cleaning for Huntington, Starksboro, and Chittenden County.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a href="#quote-form" class="inline-flex items-center justify-center bg-white text-ink-900 px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-ink-100 transition-colors">
+                    Request a Free Quote
+                </a>
+                <a href="tel:8027355949" class="inline-flex items-center justify-center border border-white/40 text-white px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors">
+                    Call or Text 802-735-5949
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 reveal">
+                    <div class="relative">
+                        <img
+                            src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/home2.jpg"
+                            alt="Clean and welcoming home interior"
+                            class="w-full aspect-[4/5] object-cover shadow-soft"
+                        >
+                        <div class="absolute -bottom-5 -right-5 hidden sm:block w-36 h-36 border border-ink-200 bg-ink-50 p-5">
+                            <p class="font-display text-3xl text-ink-900 leading-none">Local</p>
+                            <p class="mt-2 text-xs uppercase tracking-[0.18em] text-ink-500">Owner cared</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 reveal space-y-6">
+                    <p class="text-xs uppercase tracking-[0.28em] text-sage-600 font-medium">Meet the service</p>
+                    <h2 class="font-display text-4xl sm:text-5xl text-ink-900 leading-[1.1]">
+                        Helping Vermont homes feel calm, fresh, and cared for.
+                    </h2>
+                    <p class="text-ink-600 leading-relaxed text-[1.05rem]">
+                        Fresh Home Cleaning is a local residential cleaning business serving homeowners and residents across Huntington, Starksboro, and Chittenden County.
+                    </p>
+                    <p class="text-ink-600 leading-relaxed">
+                        Inviting someone into your home requires trust. We focus on being dependable, respectful, and thorough — treating every space with the same care we would our own.
+                    </p>
+                    <div class="divider-line my-2"></div>
+                    <div class="flex flex-wrap gap-x-10 gap-y-4 text-sm text-ink-700">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-px bg-sage-500"></span>
+                            Dependable & discreet
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-px bg-sage-500"></span>
+                            Homes, apartments & townhouses
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-px bg-sage-500"></span>
+                            Personalized to your space
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 sm:py-28 bg-ink-900 text-ink-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.07] pointer-events-none" style="background-image:radial-gradient(circle at 20% 20%, #6a8f76 0, transparent 40%), radial-gradient(circle at 80% 80%, #c99575 0, transparent 35%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-2xl reveal mb-16">
+                <p class="text-xs uppercase tracking-[0.28em] text-sage-500 font-medium">Residential cleaning</p>
+                <h2 class="font-display text-4xl sm:text-5xl mt-4 leading-[1.1]">Cleaning that fits the way you live.</h2>
+                <p class="mt-5 text-ink-300 leading-relaxed">Every home has its own rhythm. Tell us yours — we shape the service around it.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-px bg-ink-700/60 border border-ink-700/60">
+                <article class="bg-ink-900 p-8 sm:p-10 reveal">
+                    <div class="flex items-start justify-between gap-4 mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6a8f76" stroke-width="1.5" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V21H3V10.5z"/><path d="M9 21v-7h6v7"/></svg>
+                        <span class="text-[0.65rem] uppercase tracking-[0.2em] text-ink-400">Popular</span>
+                    </div>
+                    <h3 class="font-display text-3xl mb-3">House Cleaning</h3>
+                    <p class="text-ink-300 text-sm leading-relaxed mb-8">Everyday care that keeps family homes feeling light, welcoming, and ready for real life.</p>
+                    <a href="#quote-form" class="inline-flex items-center gap-2 text-sm text-ink-50 border-b border-sage-500/70 pb-0.5 hover:text-sage-100 transition-colors">Ask about house cleaning</a>
+                </article>
+
+                <article class="bg-ink-900 p-8 sm:p-10 reveal">
+                    <div class="flex items-start justify-between gap-4 mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6a8f76" stroke-width="1.5" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                        <span class="text-[0.65rem] uppercase tracking-[0.2em] text-ink-400">Flexible</span>
+                    </div>
+                    <h3 class="font-display text-3xl mb-3">Apartment Cleaning</h3>
+                    <p class="text-ink-300 text-sm leading-relaxed mb-8">Compact living, thoughtfully maintained — regular help or one focused visit when you need it most.</p>
+                    <a href="#quote-form" class="inline-flex items-center gap-2 text-sm text-ink-50 border-b border-sage-500/70 pb-0.5 hover:text-sage-100 transition-colors">Request apartment cleaning</a>
+                </article>
+
+                <article class="bg-ink-900 p-8 sm:p-10 reveal">
+                    <div class="flex items-start justify-between gap-4 mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6a8f76" stroke-width="1.5" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+                        <span class="text-[0.65rem] uppercase tracking-[0.2em] text-ink-400">Thorough</span>
+                    </div>
+                    <h3 class="font-display text-3xl mb-3">Townhouse Cleaning</h3>
+                    <p class="text-ink-300 text-sm leading-relaxed mb-8">Multi-level spaces cleaned with attention to the details that stack up across floors.</p>
+                    <a href="#quote-form" class="inline-flex items-center gap-2 text-sm text-ink-50 border-b border-sage-500/70 pb-0.5 hover:text-sage-100 transition-colors">Get a townhouse quote</a>
+                </article>
+
+                <article class="bg-ink-900 p-8 sm:p-10 reveal">
+                    <div class="flex items-start justify-between gap-4 mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6a8f76" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2.5"/></svg>
+                        <span class="text-[0.65rem] uppercase tracking-[0.2em] text-ink-400">Tailored</span>
+                    </div>
+                    <h3 class="font-display text-3xl mb-3">Customized Cleaning</h3>
+                    <p class="text-ink-300 text-sm leading-relaxed mb-8">Not sure what you need? Share your priorities — we’ll shape a plan that fits your home and schedule.</p>
+                    <a href="#quote-form" class="inline-flex items-center gap-2 text-sm text-ink-50 border-b border-sage-500/70 pb-0.5 hover:text-sage-100 transition-colors">Tell us what you need</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-24 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mb-16 reveal">
+                <p class="text-xs uppercase tracking-[0.28em] text-sage-600 font-medium">Simple process</p>
+                <h2 class="font-display text-4xl sm:text-5xl text-ink-900 mt-4 leading-[1.1]">From first message to a fresher home.</h2>
+            </div>
+            <ol class="grid md:grid-cols-4 gap-10 md:gap-6">
+                <li class="reveal">
+                    <p class="font-display text-5xl text-ink-200 leading-none mb-4">01</p>
+                    <h3 class="text-lg font-medium text-ink-900 mb-2">Tell us about your home</h3>
+                    <p class="text-sm text-ink-600 leading-relaxed">Share your location and what you’d like cleaned.</p>
+                </li>
+                <li class="reveal">
+                    <p class="font-display text-5xl text-ink-200 leading-none mb-4">02</p>
+                    <h3 class="text-lg font-medium text-ink-900 mb-2">Discuss your needs</h3>
+                    <p class="text-sm text-ink-600 leading-relaxed">We learn your priorities and shape the right service.</p>
+                </li>
+                <li class="reveal">
+                    <p class="font-display text-5xl text-ink-200 leading-none mb-4">03</p>
+                    <h3 class="text-lg font-medium text-ink-900 mb-2">Schedule cleaning</h3>
+                    <p class="text-sm text-ink-600 leading-relaxed">We arrange a time that works for your household.</p>
+                </li>
+                <li class="reveal">
+                    <p class="font-display text-5xl text-ink-200 leading-none mb-4">04</p>
+                    <h3 class="text-lg font-medium text-ink-900 mb-2">Enjoy the difference</h3>
+                    <p class="text-sm text-ink-600 leading-relaxed">Come home to a space that feels lighter and calmer.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 sm:py-28 bg-ink-50/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 reveal">
+                <div class="max-w-xl">
+                    <p class="text-xs uppercase tracking-[0.28em] text-sage-600 font-medium">Our work</p>
+                    <h2 class="font-display text-4xl sm:text-5xl text-ink-900 mt-4 leading-[1.1]">Spaces that speak for themselves.</h2>
+                </div>
+                <p class="text-ink-600 text-sm max-w-sm leading-relaxed">Real homes. Real results. A glimpse of the care Fresh Home Cleaning brings to every visit.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
+                <figure class="md:col-span-7 relative overflow-hidden group reveal aspect-[16/11]">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/home1.jpg" alt="Living room after professional cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-5 sm:p-6 bg-gradient-to-t from-ink-950/75 to-transparent">
+                        <p class="text-white font-medium">Living spaces, refreshed</p>
+                        <p class="text-white/65 text-xs mt-1">Bright, ordered, ready to enjoy</p>
+                    </figcaption>
+                </figure>
+                <figure class="md:col-span-5 relative overflow-hidden group reveal aspect-[4/5] md:aspect-auto md:min-h-full">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/washroom%20celaning.jpg" alt="Bathroom cleaned by Fresh Home Cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-5 sm:p-6 bg-gradient-to-t from-ink-950/75 to-transparent">
+                        <p class="text-white font-medium">Bathrooms done right</p>
+                        <p class="text-white/65 text-xs mt-1">Detail work that lasts</p>
+                    </figcaption>
+                </figure>
+                <figure class="md:col-span-4 relative overflow-hidden group reveal aspect-[4/5]">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/wadrobe%20arrangment.jpg" alt="Organized wardrobe and closet arrangement" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-ink-950/75 to-transparent">
+                        <p class="text-white font-medium">Wardrobe arrangement</p>
+                        <p class="text-white/65 text-xs mt-1">Order that feels intentional</p>
+                    </figcaption>
+                </figure>
+                <figure class="md:col-span-4 relative overflow-hidden group reveal aspect-[4/5]">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/cleanwasher.jpg" alt="Clean laundry area and washer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-ink-950/75 to-transparent">
+                        <p class="text-white font-medium">Laundry & utility care</p>
+                        <p class="text-white/65 text-xs mt-1">The rooms that often wait</p>
+                    </figcaption>
+                </figure>
+                <figure class="md:col-span-4 relative overflow-hidden group reveal aspect-[4/5]">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/home2.jpg" alt="Fresh home interior after cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-ink-950/75 to-transparent">
+                        <p class="text-white font-medium">Whole-home calm</p>
+                        <p class="text-white/65 text-xs mt-1">A finish you can feel</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video" class="py-24 sm:py-28">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <p class="text-xs uppercase tracking-[0.28em] text-sage-600 font-medium">See the difference</p>
+                <h2 class="font-display text-4xl sm:text-5xl text-ink-900 mt-4 leading-[1.1]">A look inside our work.</h2>
+                <p class="mt-4 text-ink-600 text-sm leading-relaxed">Watch a short reel from Fresh Home Cleaning — real service, real homes.</p>
+            </div>
+
+            <div class="reveal shadow-soft border border-ink-200 bg-ink-900 overflow-hidden">
+                <div class="video-frame">
+                    <iframe
+                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1ZjfBzV1xN%2F&show_text=false&width=734&t=0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        title="Fresh Home Cleaning video"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+            <p class="mt-5 text-center text-sm text-ink-500">
+                Video not loading?
+                <a href="https://www.facebook.com/share/r/1ZjfBzV1xN/" target="_blank" rel="noopener noreferrer" class="text-ink-900 underline underline-offset-4 decoration-sage-500/60 hover:decoration-sage-500">
+                    Open on Facebook
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Service areas -->
+    <section id="service-areas" class="py-24 sm:py-28 bg-ink-900 text-ink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-6 reveal">
+                    <p class="text-xs uppercase tracking-[0.28em] text-sage-500 font-medium">Service areas</p>
+                    <h2 class="font-display text-4xl sm:text-5xl mt-4 leading-[1.1]">Proudly serving local Vermont homes.</h2>
+                    <p class="mt-5 text-ink-300 leading-relaxed max-w-md">
+                        Residential cleaning across Huntington, Starksboro, South Starksboro, and Chittenden County. Not sure if we cover your street? Just ask.
+                    </p>
+                </div>
+                <div class="lg:col-span-6 reveal grid sm:grid-cols-2 gap-4">
+                    <div class="border border-ink-700 px-5 py-6">
+                        <p class="font-display text-2xl">Huntington</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-ink-400 mt-2">Vermont</p>
+                    </div>
+                    <div class="border border-ink-700 px-5 py-6">
+                        <p class="font-display text-2xl">Starksboro</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-ink-400 mt-2">Vermont</p>
+                    </div>
+                    <div class="border border-ink-700 px-5 py-6">
+                        <p class="font-display text-2xl">South Starksboro</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-ink-400 mt-2">Vermont</p>
+                    </div>
+                    <div class="border border-ink-700 px-5 py-6">
+                        <p class="font-display text-2xl">Chittenden County</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-ink-400 mt-2">Vermont</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Quote -->
+    <section id="contact" class="py-24 sm:py-28">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="quote-form" class="border border-ink-200 bg-white/70 backdrop-blur-sm p-8 sm:p-12 shadow-soft reveal">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <p class="text-xs uppercase tracking-[0.28em] text-sage-600 font-medium">Get started</p>
+                    <h2 class="font-display text-4xl sm:text-5xl text-ink-900 mt-4 leading-[1.1]">Request a cleaning quote</h2>
+                    <p class="mt-4 text-sm text-ink-600 leading-relaxed">Tell us about your home. We’ll review your request and reach out to discuss the details.</p>
+                </div>
+
+                <form id="cleaning-form" onsubmit="handleFormSubmit(event)" class="space-y-8">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs uppercase tracking-[0.16em] text-ink-500 mb-2">Your Name</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-ink-200 bg-ink-50/50 focus:outline-none focus:border-sage-500 transition-colors" placeholder="Jane Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-[0.16em] text-ink-500 mb-2">Phone</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-ink-200 bg-ink-50/50 focus:outline-none focus:border-sage-500 transition-colors" placeholder="802-555-0199">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-[0.16em] text-ink-500 mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-ink-200 bg-ink-50/50 focus:outline-none focus:border-sage-500 transition-colors" placeholder="jane@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-[0.16em] text-ink-500 mb-2">Location / City</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-ink-200 bg-ink-50/50 focus:outline-none focus:border-sage-500 transition-colors" placeholder="Huntington, VT">
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend class="text-xs uppercase tracking-[0.16em] text-ink-500 mb-3">Type of property</legend>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="property_type" value="House" required class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block text-center border border-ink-200 py-3 text-sm text-ink-800">House</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="property_type" value="Apartment" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block text-center border border-ink-200 py-3 text-sm text-ink-800">Apartment</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="property_type" value="Townhouse" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block text-center border border-ink-200 py-3 text-sm text-ink-800">Townhouse</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="property_type" value="Other" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block text-center border border-ink-200 py-3 text-sm text-ink-800">Other</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="text-xs uppercase tracking-[0.16em] text-ink-500 mb-3">Cleaning type</legend>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cleaning_type" value="Regular Cleaning" required class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-3 text-sm text-ink-800">Regular Cleaning</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cleaning_type" value="One-Time Cleaning" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-3 text-sm text-ink-800">One-Time Cleaning</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cleaning_type" value="Deep Cleaning" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-3 text-sm text-ink-800">Deep Cleaning</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cleaning_type" value="Not Sure" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-3 text-sm text-ink-800">Not Sure — Let’s Discuss</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="text-xs uppercase tracking-[0.16em] text-ink-500 mb-3">How often</legend>
+                        <div class="flex flex-wrap gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="frequency" value="Weekly" required class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-2.5 text-sm text-ink-800">Weekly</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="frequency" value="Every 2 Weeks" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-2.5 text-sm text-ink-800">Every 2 Weeks</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="frequency" value="Monthly" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-2.5 text-sm text-ink-800">Monthly</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="frequency" value="One-Time" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-2.5 text-sm text-ink-800">One-Time</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="frequency" value="Not Sure" class="sr-only peer">
+                                <span class="choice-ui peer-checked:border-sage-600 peer-checked:bg-sage-50 block border border-ink-200 px-4 py-2.5 text-sm text-ink-800">Not Sure</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-[0.16em] text-ink-500 mb-2">Anything else we should know</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-ink-200 bg-ink-50/50 focus:outline-none focus:border-sage-500 transition-colors" placeholder="Rooms to focus on, pets, access notes..."></textarea>
+                    </div>
+
+                    <fieldset>
+                        <legend class="text-xs uppercase tracking-[0.16em] text-ink-500 mb-3">Preferred contact</legend>
+                        <div class="flex flex-wrap gap-6 text-sm text-ink-800">
+                            <label class="inline-flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="contact_method" value="Phone" checked class="accent-sage-600"> Phone
+                            </label>
+                            <label class="inline-flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="contact_method" value="Text" class="accent-sage-600"> Text
+                            </label>
+                            <label class="inline-flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="contact_method" value="Email" class="accent-sage-600"> Email
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="w-full bg-ink-900 hover:bg-ink-800 text-ink-50 font-medium py-4 transition-colors tracking-wide">
+                        Request My Free Quote
+                    </button>
+                </form>
+
+                <div id="form-success" class="hidden mt-8 border border-sage-500/30 bg-sage-50 p-8 text-center">
+                    <p class="font-display text-3xl text-ink-900">Quote request received</p>
+                    <p class="mt-3 text-sm text-ink-600">Thank you. We’ll review your request and contact you shortly.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-ink-600">
+                <a href="tel:8027355949" class="hover:text-ink-900 transition-colors">802-735-5949</a>
+                <span class="hidden sm:inline text-ink-300">|</span>
+                <a href="mailto:freshhomecleaners@outlook.com" class="hover:text-ink-900 transition-colors">freshhomecleaners@outlook.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 sm:py-28 bg-ink-50/80">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 reveal">
+                <p class="text-xs uppercase tracking-[0.28em] text-sage-600 font-medium">Questions</p>
+                <h2 class="font-display text-4xl sm:text-5xl text-ink-900 mt-4">Frequently asked</h2>
+            </div>
+            <div class="space-y-3">
+                <details class="faq group border border-ink-200 bg-white/60 open:bg-white reveal">
+                    <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between gap-4 font-medium text-ink-900">
+                        What areas do you serve?
+                        <span class="text-ink-400 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                    </summary>
+                    <p class="px-6 pb-5 text-sm text-ink-600 leading-relaxed">Huntington, Starksboro, South Starksboro, Chittenden County, and surrounding areas.</p>
+                </details>
+                <details class="faq group border border-ink-200 bg-white/60 open:bg-white reveal">
+                    <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between gap-4 font-medium text-ink-900">
+                        What types of homes do you clean?
+                        <span class="text-ink-400 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                    </summary>
+                    <p class="px-6 pb-5 text-sm text-ink-600 leading-relaxed">Houses, townhouses, apartments, and other residential living spaces.</p>
+                </details>
+                <details class="faq group border border-ink-200 bg-white/60 open:bg-white reveal">
+                    <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between gap-4 font-medium text-ink-900">
+                        Do I need to know exactly what service I need?
+                        <span class="text-ink-400 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                    </summary>
+                    <p class="px-6 pb-5 text-sm text-ink-600 leading-relaxed">No. Tell us what you’re hoping for and we’ll help figure out the best fit.</p>
+                </details>
+                <details class="faq group border border-ink-200 bg-white/60 open:bg-white reveal">
+                    <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between gap-4 font-medium text-ink-900">
+                        How do I request a quote?
+                        <span class="text-ink-400 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                    </summary>
+                    <p class="px-6 pb-5 text-sm text-ink-600 leading-relaxed">Call or text <a href="tel:8027355949" class="underline underline-offset-2 decoration-sage-500/50">802-735-5949</a>, email <a href="mailto:freshhomecleaners@outlook.com" class="underline underline-offset-2 decoration-sage-500/50">freshhomecleaners@outlook.com</a>, or use the form above.</p>
+                </details>
+                <details class="faq group border border-ink-200 bg-white/60 open:bg-white reveal">
+                    <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between gap-4 font-medium text-ink-900">
+                        Do you offer regular cleaning?
+                        <span class="text-ink-400 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                    </summary>
+                    <p class="px-6 pb-5 text-sm text-ink-600 leading-relaxed">Yes — weekly, biweekly, monthly, or one-time. We’ll discuss what suits your home.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative py-28 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://raw.githubusercontent.com/Creativetugs/Fresh-Home-Cleaning/refs/heads/main/home2.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true">
+            <div class="absolute inset-0 bg-ink-950/75"></div>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4 text-center reveal">
+            <p class="font-display text-4xl sm:text-5xl text-white leading-[1.1]">Your home deserves to feel fresh.</p>
+            <p class="mt-5 text-white/70 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+                Let Fresh Home Cleaning handle the cleaning so you can return to what matters.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+                <a href="#quote-form" class="bg-white text-ink-900 px-7 py-3.5 text-sm font-medium hover:bg-ink-100 transition-colors">Request a Free Quote</a>
+                <a href="tel:8027355949" class="border border-white/40 text-white px-7 py-3.5 text-sm font-medium hover:bg-white/10 transition-colors">802-735-5949</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink-950 text-ink-400 py-16 border-t border-ink-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-9 h-9" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="64" height="64" rx="14" fill="#F7F5F1"/>
+                            <path d="M32 14L48 26V48H38V35H26V48H16V26L32 14Z" stroke="#1C1B19" stroke-width="2.2" stroke-linejoin="round"/>
+                            <path d="M32 22C32 22 28.5 27.5 28.5 31.2C28.5 34.1 30.1 35.8 32 35.8C33.9 35.8 35.5 34.1 35.5 31.2C35.5 27.5 32 22 32 22Z" fill="#4F735C"/>
+                        </svg>
+                        <div>
+                            <p class="font-display text-xl text-ink-50 leading-none">Fresh Home</p>
+                            <p class="text-[0.6rem] tracking-[0.22em] uppercase mt-1">Cleaning</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-xs">Reliable residential cleaning for homes, apartments, and townhouses throughout Chittenden County.</p>
+                </div>
+                <div>
+                    <h4 class="text-ink-50 text-xs uppercase tracking-[0.2em] mb-4">Areas</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Huntington, VT</li>
+                        <li>Starksboro, VT</li>
+                        <li>South Starksboro, VT</li>
+                        <li>Chittenden County, VT</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-ink-50 text-xs uppercase tracking-[0.2em] mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="tel:8027355949" class="hover:text-ink-50 transition-colors">802-735-5949</a></li>
+                        <li><a href="mailto:freshhomecleaners@outlook.com" class="hover:text-ink-50 transition-colors">freshhomecleaners@outlook.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-ink-50 text-xs uppercase tracking-[0.2em] mb-4">Explore</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-ink-50 transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-ink-50 transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="hover:text-ink-50 transition-colors">Work</a></li>
+                        <li><a href="#video" class="hover:text-ink-50 transition-colors">Video</a></li>
+                        <li><a href="#contact" class="hover:text-ink-50 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-ink-800 flex flex-col sm:flex-row justify-between gap-3 text-xs text-ink-500">
+                <p>&copy; 2026 Fresh Home Cleaning. All rights reserved.</p>
+                <p>Owner-operated residential cleaning in Vermont.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile sticky CTA -->
+    <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-ink-200 bg-ink-50/95 backdrop-blur-md p-3 flex gap-2">
+        <a href="tel:8027355949" class="flex-1 text-center bg-ink-900 text-ink-50 py-3 text-sm font-medium">Call / Text</a>
+        <a href="#quote-form" class="flex-1 text-center border border-ink-900 text-ink-900 py-3 text-sm font-medium">Free Quote</a>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('site-header');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('hidden') === false;
+            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const onScroll = () => {
+            if (window.scrollY > 40) header.classList.add('nav-scrolled');
+            else header.classList.remove('nav-scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach((el) => io.observe(el));
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('cleaning-form').classList.add('hidden');
+            const successBox = document.getElementById('form-success');
+            successBox.classList.remove('hidden');
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
